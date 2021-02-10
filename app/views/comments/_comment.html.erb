@@ -1,6 +1,6 @@
 <p>
   <strong><%= comment.name %>:</strong>
   <%= comment.content %>
-  <%= link_to 'Delete', [comment.blog, comment],
+  <%= link_to 'Delete', blog_comment_path(comment.blog, comment), # [comment.blog, comment]でもかける。
               method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
 </p>
